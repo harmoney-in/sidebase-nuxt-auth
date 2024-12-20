@@ -24,7 +24,8 @@ const signIn: SignInFunc<Credentials, any> = async (credentials, signInOptions, 
     method,
     body: credentials,
     params: signInParams ?? {},
-    headers: signInHeaders ?? {}
+    headers: signInHeaders ?? {},
+    credentials: 'include'
   })
 
   const { rawToken, rawRefreshToken } = useAuthState()
